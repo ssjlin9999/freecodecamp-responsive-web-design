@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">
+    
+    <style>
+      body {
+        font-family: Open Sans, monospace;
+        background: #f9f9f9;
+        margin-top: 35px;
+      }
+
+      img {
+        background: black;
+        text-align: center;
+        width: 100%;
+      }
+
+      blockquote  {
+        background: #f9f9f9;
+        border-left: 5px solid #aaa;
+        margin: 1.5em auto;
+      }
+    
+      blockquote::before {
+        font-size: 4em;
+        line-height: 2.5em;
+        margin-right: 0.25em;
+      }
+    
+      blockquote p {
+        display: inline;
+      }
+
+      h1 {
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      
+      p {
+        font-size: 1.125rem;
+      }
+      
+      h1,
+      p {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      button,
+      select,
+      textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      
+      button {
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .container {
+        background: white;
+        width: 100%;
+        margin: 3.125rem auto 0 auto;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      
+      #submit {
+        background: rgb(107, 103, 103);
+        color: white;
+        width: 30%;
+        font-weight: bold;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        height: 2rem;
+      }
+
+      .form-group {
+        margin: 5px 5px;
+      }
+
+      .form-input {
+        display: block;
+        width: 100%;
+        display: block;
+        margin: 5px auto;
+      }
+
+      .input-radio,
+      .input-checkbox {
+        display: inline-block;
+        margin-left: 1.25rem;
+        min-width: 1.25rem;
+        min-height: 1.25rem;;
+      }
+
+      .input-textarea {
+        min-height: 120px;
+        width: 100%;
+        resize: vertical; 
+      }
+
+      .form-submit {
+        text-align: center;
+        margin: 30px auto 35px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="https://images.unsplash.com/photo-1526649661456-89c7ed4d00b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1771&q=80" 
+          alt="每個人都能寫程式的圖片 來源：Unsplash">
+
+        <h1 id="title">課程滿意度調查</h1>
+        <p id="description">感謝您撥空幫忙填寫問卷，幫助我們改善課程</p>
+      </header>
+
+      <form id="survey-form">
+        <blockquote>
+          <h2>個人資訊</h2>
+          <p>本問卷蒐集來的資訊，僅會作為內部課程改善使用。絕不外洩也不會作為其他用途使用，敬請放心填寫！</p>
+        </blockquote>
+        
+        <div class="form-group">
+          <label for="name" id="name-label">姓名:</label>
+          <input
+            type="text"
+            class="form-input"
+            id="name"
+            name="userName"
+            required
+            placeholder="請輸入您的名字"/>
+        </div>
+
+        <div class="form-group">
+          <label for="email" id="email-label">信箱:</label>
+          <input
+            type="email"
+            class="form-input"
+            id="email"
+            name="userEmail"
+            required placeholder="請輸入電子信箱"/>
+        </div>
+
+        <div class="form-group">
+          <label for="number" id="number-label">年齡:</label>
+          <input
+            type="number"
+            class="form-input"
+            id="number"
+            name="userPhone"
+            placeholder="請輸入年齡"
+            min="1"
+            max="100"/>
+        </div>
+
+        <div class="form-group">
+          <p>職位:</p>
+          <select
+            id="dropdown"
+            name="role"
+            class="form-input"
+            required>
+            <option value="">請選擇目前的職位</option>
+            <option value="student">學生</option>
+            <option value="fulltime-job">全職工作者</option>
+            <option value="ulltime-learner">全職進修者</option>
+            <option value="perfer-not-to-say">不方便透露</option>
+            <option value="others">其他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <h3>你曾參與過此課程嗎？</h3>
+          <label for="yes">
+            <input
+              type="radio"
+              class="input-radio"
+              name="fcc-yes-no"
+              id="yes"
+              value="有"
+              checked>
+            有
+          </label>
+          <label for="no">
+            <input
+              type="radio"
+              class="input-radio"
+              name="fcc-yes-no"
+              id="no"
+              value="沒有">
+            沒有
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3>你最喜歡哪個課程？</h3>
+          <label for="unit1">
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="rwd-unit"
+              id="unit1"
+              value="unit1">
+            響應式網頁設計
+          </label>
+
+          <label for="unit2">
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="rwd-unit"
+              id="unit2"
+              value="unit2">
+            JavaScript 算法和數據結構
+          </label>
+
+          <label for="unit3">
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="rwd-unit"
+              id="unit3"
+              value="unit3">
+            前端開發庫
+          </label>
+
+          <label for="unit4">
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="rwd-unit"
+              id="unit4"
+              value="unit4">
+            數據可視化
+          </label>
+
+          <label for="unit5">
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="rwd-unit"
+              id="unit5" value="unit5">
+            APIs 和 微服務
+          </label>
+
+          <label for="unit6">
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="rwd-unit"
+              id="unit6"
+              value="unit6">
+            質量保證
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3>歡迎您留下任何想法與建議？</h3>
+          <label for="comments">
+            <textarea
+              class="input-textarea"
+              id="comments"
+              name="comments"
+              rows="4"
+              cols="50"
+              placeholder="你有什麼建議或是想法想對我說的，請留言在這裡。">
+            </textarea>
+          </label>
+        </div>
+
+        <div class="form-submit">
+          <h3>感謝您耐心的填寫，期待您的再次光臨！</h3>
+          <p>請記得點選下方的「送出問卷」</p>
+          <button type="submit" id="submit">
+            送出
+          </button>
+          <p>SunnySurvey &copy; 2021</p>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
