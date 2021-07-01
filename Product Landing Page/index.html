@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">
+    
+  <style>
+    body {
+      min-height: 150vh;
+      font-family: Open Sans, monospace;
+      text-align: center;
+    }
+    #header {
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: #eee;
+      z-index: 99;
+      justify-content: space-around;
+      align-items: baseline
+    }
+    @media (max-width: 600px) {
+      #header {
+        flex-wrap: wrap;
+      }
+    }
+    #header-img {
+      position: relative;
+      top: 0.5em;
+      width: 2em;
+      height: 2em;
+      margin: auto;
+    }
+    nav ul {
+      margin: 0px;
+      padding: 5px 0px 5px 30px;
+    }
+    nav li {
+      display: inline;
+      margin-right: 20px;
+      list-style: none;
+    }
+    nav a:hover {
+      background-color: indigo;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+    }
+    section {
+      position: relative;
+      top: 50px;
+      height: 400px;
+    }
+    #video {
+      position: inherit;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+    <header id="header">
+      <div>
+        <img id="header-img" src="https://image.flaticon.com/icons/png/512/1864/1864480.png" alt="公司的Logo照片 來源：https://www.flaticon.com/free-icon/squirrel_1864480">
+      </div>
+      
+      <p>SunnyInTech!</p>
+
+      <div>
+        <nav id="nav-bar">
+          <ul>
+            <li><a class="nav-link" href="#start-to-use">開始使用</a></li>
+            <li><a class="nav-link" href="#support">支援</a></li>
+            <li><a class="nav-link" href="#pricing">價格</a></li>
+          </ul>
+        </nav>
+      </div>
+      <form id="form" action="https://www.freecodecamp.org/email-submit">
+        <input id="email" type="email" name="email" placeholder="請輸入您的電子信箱" required>
+        <label for="submit"></label>
+        <input id="submit" type="submit" value="登入">
+      </form>
+    </header>
+
+    <section id="start-to-use">
+      <h1>開始使用</h1>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/srvUrASNj0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section id="support">
+      <h1>支援</h1>
+    </section>
+
+    <section id="pricing">
+      <h1>價格</h1>
+    </section>
+
+    <footer>
+      <span>Sunny &copy; 2021</span>
+    </footer>
+</body>
+</html>
