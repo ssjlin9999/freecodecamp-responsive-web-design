@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation Page</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">
+
+  <style>
+    html,
+    body {
+      min-width: 290px;
+      color: #4d4e53;
+      background-color: #ffffff;
+      font-family: 'Open Sans', Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    #navbar {
+      position: fixed;
+      min-width: 290px;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+      height: 100%;
+      border-right: solid;
+      border-color: rgba(0, 22, 22, 0.4);
+    }
+
+    header {
+      color: black;
+      margin: 10px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    #main-doc header {
+      text-align: left;
+      margin: 0px;
+    }
+
+    #navbar ul {
+      height: 88%;
+      padding: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #navbar li {
+      color: #4d4e53;
+      border-top: 1px solid;
+      list-style: none;
+      position: relative;
+      width: 100%;
+    }
+
+    #navbar a {
+      display: block;
+      padding: 10px 30px;
+      color: #4d4e53;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #main-doc {
+      position: absolute;
+      margin-left: 310px;
+      padding: 20px;
+      margin-bottom: 110px;
+    }
+
+    section article {
+      color: #4d4e53;
+      margin: 15px;
+      font-size: 0.96em;
+    }
+
+    section li {
+      margin: 15px 0px 0px 20px;
+    }
+
+    code {
+      display: block;
+      text-align: left;
+      white-space: pre-line;
+      position: relative;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 2;
+      background-color: #f7f7f7;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    @media only screen and (max-width: 815px) {
+      /* For mobile phones: */
+      #navbar ul {
+        border: 1px solid;
+        height: 207px;
+      }
+
+      #navbar {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+      }
+
+      #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 270px;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      #main-doc {
+        margin-left: -10px;
+      }
+
+      code {
+        margin-left: -20px;
+        width: 100%;
+        padding: 15px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
+      }
+    }
+    footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      line-height: 30px;
+      text-align: center;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <header>課程筆記文件</header>
+
+    <ul>
+      <li><a class="nav-link" href="#響應式網頁設計">響應式網頁設計</a></li>
+      <li><a class="nav-link" href="#JavaScript_演算法與資料結構">JavaScript 演算法與資料結構</a></li>
+      <li><a class="nav-link" href="#前端開發函式庫">前端開發函式庫</a></li>
+      <li><a class="nav-link" href="#數據可視化">數據可視化</a></li>
+      <li><a class="nav-link" href="#APIs和微服務">APIs和微服務</a></li>
+      <li><a class="nav-link" href="#質量保證">質量保證</a></li>
+      <li><a class="nav-link" href="#參考資料">參考資料</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="響應式網頁設計">
+      <header>響應式網頁設計</header>
+      <article>
+        <p>在響應式網頁設計認證中，你將學習開發者用來編寫網頁的語言：HTML（超文本標記語言）用於創建內容，CSS（級聯樣式表）用於樣式設計。</p>
+
+        <p>首先，你將通過編寫一個展示貓咪圖片的應用，學習 HTML 和 CSS 的基本知識。 然後，通過畫企鵝來學習像 CSS 變量這樣的現代技術，以及通過構建網頁表單來學習無障礙的最佳實踐。</p>
+          
+        <p>最後，你將學習使用 flexbox（彈性盒子）構建一個 Twitter 卡片，以及使用 CSS 網格構建複雜的博客佈局，以此學習製作適應不同屏幕大小的網頁。</p>
+
+        <code>
+          < !DOCTYPE html>
+          < html lang="en">
+          < head>
+            < meta charset="UTF-8">
+            < meta http-equiv="X-UA-Compatible" content="IE=edge">
+            < meta name="viewport" content="width=device-width, initial-scale=1.0">
+            < title>Document< /title>
+          < /head>
+          < body>
+            
+          < /body>
+          < /html>
+        </code>
+
+        <h1>項目</h1>
+        <ul>
+          <li>製作一個致敬頁</li>
+          <li>製作一個調查表格</li>
+          <li>製作一個產品登錄頁</li>
+          <li>製作一個技術文檔頁面</li>
+          <li>製作一個個人作品集展示頁</li></li>
+        </ul>
+        <p></p>
+      </article>
+    </section>
+
+    <section class="main-section" id="JavaScript_演算法與資料結構">
+      <header>JavaScript 演算法與資料結構</header>
+      <article>
+        <p>HTML 和 CSS 控制頁面的內容和樣式，JavaScript 則用於頁面交互。在 JavaScript 算法和數據結構認證中，你將學習 JavaScript 的基礎知識，包括變量、 數組、 對象、 循環和函數。</p>
+
+        <p>打好基礎之後，你將會通過創建算法來操作字符串、進行階乘運算甚至計算國際空間站的軌道來應用這些知識。</p>
+
+        <p>在這個過程中，你還會學習兩種重要的編程方式或模式：面向對象的編程（OOP）和函數式編程（FP）。</p>
+        <code></code>
+      </article>
+    </section>
+
+    <section class="main-section" id="前端開發函式庫">
+      <header>前端開發函式庫</header>
+      <article>
+        <p>你已經熟悉了 HTML、CSS 和 JavaScript。現在學習行業中一些流行的前端庫來提升你的技能吧。</p>
+
+        <p>在前端庫認證中，你將學習如何使用 Bootstrap 快速設置網站樣式，以及如何在 CSS 樣式中添加邏輯，並使用 Sass 對其進行擴展。</p>
+
+        <p>稍後，你將建立一個購物車和其他應用程序，學習如何使用 React 和 Redux 創建強大的單頁應用程序（SPAs）。</p>
+        <code></code>
+      </article>
+    </section>
+
+    <section class="main-section" id="數據可視化">
+      <header>數據可視化</header>
+      <article>
+        <p></p>
+        <code></code>
+        <p></p>
+      </article>
+    </section>
+
+    <section class="main-section" id="APIs和微服務">
+      <header>APIs和微服務</header>
+      <article>
+        <p></p>
+        <code></code>
+        <p></p>
+      </article>
+    </section>
+    
+
+    <section class="main-section" id="質量保證">
+      <header>質量保證</header>
+      <article>
+        <p></p>
+        <code></code>
+        <p></p>
+      </article>
+    </section>
+
+    <section class="main-section" id="參考資料">
+      <header>參考資料</header>
+      <article>
+        <ul>
+          <li>
+            此頁所有的文件皆來自
+            <a
+              href="https://www.freecodecamp.org/"
+              target="_blank"
+             >freeCodeCamp</a
+           >
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>Sunny &copy; 2021</span>
+  </footer>
+</body>
+</html>
